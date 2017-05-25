@@ -11,8 +11,7 @@ module.exports = function (gulp, plugins, options) {
       options.sass.files
     ])
       .pipe(plugins.plumber({
-        errorHandler: function(e) {
-          console.log(e.messageFormatted);
+        errorHandler: function (e) {
           this.emit('end');
         }
       }))
