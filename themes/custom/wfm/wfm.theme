@@ -54,6 +54,9 @@ function wfm_preprocess_page(&$variables) {
   else {
     $variables['attributes']['class'][] = Html::cleanCssIdentifier('page-standard');
   }
+  if($variables['is_front']) {
+    $variables['tmpHTMLCheck'] = file_get_contents(DRUPAL_ROOT . '/vuejs2/index.html');
+  }
 }
 
 /**
